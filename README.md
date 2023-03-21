@@ -1,4 +1,5 @@
 Next.js 연습
+
 제대로된 작동 위해 .env 파일에 API_KEY 작성할 것
 
 ## Getting Started
