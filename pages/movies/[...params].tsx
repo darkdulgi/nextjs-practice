@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Seo from "../seo";
+import Seo from "../components/seo";
 
 export default function Detail({ params }: any) {
   const [title, id] = params || [];
@@ -10,10 +10,10 @@ export default function Detail({ params }: any) {
       setOverview(json.overview);
     })();
   }, [])
-  return <div>
+  return <div className="grid mx-5">
     <Seo title={title} />
-    <h1>{title}</h1>
-    <h4>{overview}</h4>
+    <p className="text-5xl font-bold">{title}</p>
+    <p className="text-lg font-medium mt-5">{overview}</p>
   </div>;
 }
 

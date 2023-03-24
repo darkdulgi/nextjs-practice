@@ -1,4 +1,4 @@
-import Seo from "./seo";
+import Seo from "./components/seo";
 import Link from "next/link";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
@@ -17,7 +17,7 @@ export default function Home({ results }: InferGetServerSidePropsType<GetServerS
   return (
     <div>
       <Seo title="Home" />
-      <div className="grid grid-cols-2 place-items-center gap-20 mt-5">
+      <div className="grid grid-cols-2 place-items-center gap-20">
         {results?.map((movie: IMovieProps) =>
           <Link key={movie.id} href={`/movies/${movie.title}/${movie.id}`}>
             <div>
@@ -27,27 +27,6 @@ export default function Home({ results }: InferGetServerSidePropsType<GetServerS
           </Link>
         )}
       </div>
-
-      {/* <style jsx>{`
-        .container {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 20px;
-          text-align: center;
-        }
-        .movie img {
-          max-width: 100%;
-          border-radius: 12px;
-          transition: transform 0.2s ease-in-out;
-          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-        }
-        .movie:hover img {
-          transform: scale(1.05) translateY(-10px);
-        }
-        .movie h4 {
-          font-size: 18px;
-        }
-      `}</style> */}
     </div>
   );
 }
