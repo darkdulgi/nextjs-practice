@@ -10,8 +10,8 @@ export default function NavBar() {
         <Link href='/'>
           <span className={router.pathname === '/' ? 'text-orange-600' : ''}>Home</span>
         </Link>
-        <Link href="/about">
-          <span className={router.pathname === "/about" ? 'text-orange-600' : ''}>About</span>
+        <Link href="/login">
+          <span className={router.pathname === '/login' ? 'text-orange-600' : ''}>Login</span>
         </Link>
       </div>
     </nav>

@@ -32,7 +32,7 @@ export default function Home({ results }: InferGetServerSidePropsType<GetServerS
 }
 
 export async function getServerSideProps() {
-  const { results } = await (await (fetch("http://localhost:3000/api/movies"))).json();
+  const { results } = await (await (fetch(`http://localhost:3000/api/movies`))).json();
   return {
     props: {
       results,
