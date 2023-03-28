@@ -1,8 +1,8 @@
 import Seo from "./components/seo";
 
-export default function Login(){
+export default function About() {
   return <div>
-    <Seo title="Login" />
+    <Seo title="About" />
     
   </div>;
 }
