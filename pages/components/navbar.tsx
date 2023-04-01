@@ -6,7 +6,7 @@ export default function NavBar() {
   const router = useRouter();
   const { data } = useSession();
   return (
-    <div>
+    <div className="shadow-lg shadow-gray-400">
       <div className="flex place-content-end place-items-center gap-2 mt-3 mx-3">
         <img src={data?.user?.image as string} className={`${data === null ? "hidden" : "rounded-full"} w-10`} />
         <span className="text-gray-600">{data?.user?.name}</span>
@@ -18,7 +18,7 @@ export default function NavBar() {
         </button>
       </div>
 
-      <nav className="flex flex-col gap-5 place-items-center shadow-lg shadow-gray-400 mb-10">
+      <nav className="flex flex-col gap-5 place-items-center mb-10">
         <img className='max-w-xs' src="/vercel.svg" />
         <div className="flex gap-10 font-bold text-xl">
           <Link href='/'>
